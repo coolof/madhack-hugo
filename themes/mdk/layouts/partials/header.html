@@ -1,0 +1,29 @@
+<header class="site-header container">
+  {{/* Logo */}}
+  <a class="site-header__logo logo" href="{{ .Site.BaseURL }}">
+    {{- partial "logo.html" . -}}
+  </a>
+
+  {{/* Navigation */}}
+  <nav class="site-header__nav" role="navigation">
+    <ul class="menu">
+      {{ if .Site.Menus.main }}
+        {{ $currentPage := . }}
+
+        {{ range .Site.Menus.main }}
+          <li class="menu__item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} menu__item--active{{end}}">
+            <a href="{{ .URL }}" title="{{ .Name }} page">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+
+      {{ if $.Site.Params.signup }}
+        <li class="menu__signup">
+          <a class="btn" href="{{ $.Site.Params.signup }}" target="_blank">Anmäl dig</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,228 @@
+/* Functions */
+$rem: 16;
+$vw: 1440;
+
+@function px-rem($val) {
+  @return ($val / 16) * 1rem;
+}
+@function rem-px($val) {
+  @return ($val * 16) * 1px;
+}
+
+@function grid($cols) {
+  @return ($cols / $grid_cols) * 100%;
+}
+
+@function grid_px($cols) {
+  @return px-rem(($cols * $grid_col) + (($cols - 1) * $grid_gutter));
+}
+
+@mixin mq($media: $landscape) {
+  @media #{$media} { @content; }
+}
+
+@mixin forminputs() {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    @content;
+  }
+}
+
+/* Center content to max-width set in variables.scss */
+@mixin contain($width: $grid_width, $padding: 40) {
+  max-width: px-rem($width + ($padding * 2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include mq($portrait) {
+    padding-left: px-rem($padding - 16);
+    padding-right: px-rem($padding - 16);
+  }
+  @include mq($landscape) {
+    padding-left: px-rem($padding - 16);
+    padding-right: px-rem($padding - 16);
+  }
+  @include mq($desktop) {
+    padding-left: px-rem($padding);
+    padding-right: px-rem($padding);
+  }
+}
+
+@mixin contain-grid($width: $max-width, $padding: 72, $align: stretch, $justify: flex-start) {
+  max-width: px-rem(($max-width + ($padding * 2)));
+  display: flex;
+  flex-flow: row wrap;
+  align-items: $align;
+  justify-content: $justify;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  @include mq($portrait) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  @include mq($landscape) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  @include mq($desktop) {
+    margin-left: px-rem($grid_gutter / 2) * -1;
+    margin-right: px-rem($grid_gutter / 2) * -1;
+  }
+}
+
+@mixin grid-cols-width($cols) {
+  width: grid($cols);
+}
+@mixin grid-cols-padding() {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  @include mq($portrait) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include mq($landscape) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @include mq($desktop) {
+    padding-left: px-rem($grid_gutter / 2);
+    padding-right: px-rem($grid_gutter / 2);
+  }
+}
+
+@mixin grid-cols($cols) {
+  @include grid-cols-padding();
+  width: grid($cols);
+}
+
+@mixin btn($height: 3rem, $bg: #000, $bg_hover: lighten($bg,10), $color: #fff, $color_hover: $color, $fontSize: 12px, $display: inline-block, $outline: false, $radius: $height / 2) {
+  display: $display;
+  height: $height;
+  color: $color;
+  font-family: $font_mono;
+  font-size: px-rem(14);
+  line-height: $height - 0.25rem;
+  font-weight: $weight_bold;
+  text-transform: uppercase;
+  padding: 0.25rem 1.5rem 0;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  @if $radius {
+    border-radius: $radius;
+  }
+
+  @if not $outline {
+    background-color: $bg;
+    color: $color;
+
+    &:hover {
+      background-color: $bg_hover;
+      color: $color_hover;
+      text-decoration: none;
+    }
+  }
+  @else {
+    box-shadow: inset 0px 0px 0px 2px $bg;
+    color: $color;
+
+    &:hover {
+      box-shadow: inset 0px 0px 0px 2px $bg_hover;
+      color: $color_hover;
+      text-decoration: none;
+    }
+  }
+}
+@mixin btn-color($bg: #000, $bg_hover: lighten($bg,10),$color: #fff, $color_hover: $color, $outline: false) {
+  @if not $outline {
+    background-color: $bg;
+    color: $color;
+
+    &:hover {
+      color: $color;
+      background-color: $bg_hover;
+    }
+  }
+  @else {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px $bg;
+    color: $color;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0px 0px 0px 2px $bg_hover;
+      color: $color_hover;
+    }
+  }
+}
+
+
+@mixin shadow($shadow1: 'normal', $shadow2: false, $size: px-rem(12), $background: $yellow) {
+  position: relative;
+  box-shadow: inset 0px 0px 0px 2px #000;
+
+  @if $shadow1 {
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      right: $size * -1;
+      bottom: $size * -1;
+      left: $size;
+      top: $size;
+      box-shadow: inset 0px 0px 0px 2px #000;
+
+      @if $shadow1 == 'dots' {
+        background: $background url('../img/dots-pattern.svg') repeat 7px -6px;
+      }
+      @else if $shadow1 == 'lines' {
+        background: $background url('../img/lines-pattern.svg') repeat 7px -6px;
+      }
+      @else {
+        background: $background;
+      }
+    }
+  }
+  @else {
+    &:before {
+      display: none;
+    }
+  }
+
+  @if $shadow2 {
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      right: $size * -2;
+      bottom: $size * -2;
+      left: $size * 2;
+      top: $size * 2;
+      box-shadow: inset 0px 0px 0px 2px #000;
+
+      @if $shadow2 == 'dots' {
+        background: $background url('../img/dots-pattern.svg') repeat 7px -6px;
+      }
+      @else if $shadow2 == 'lines' {
+        background: $background url('../img/lines-pattern.svg') repeat 7px -6px;
+      }
+      @else {
+        background: $background;
+      }
+    }
+  }
+  @else {
+    &:after {
+      display: none;
+    }
+  }
+}

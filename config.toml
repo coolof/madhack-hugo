@@ -1,0 +1,7 @@
+baseURL = "http://madhack.se/"
+languageCode = "sv-se"
+title = "Madhack"
+theme = "mdk"
+
+[params]
+  signup = "http://www.madhack.se"

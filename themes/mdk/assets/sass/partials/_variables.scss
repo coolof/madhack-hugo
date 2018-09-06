@@ -1,0 +1,54 @@
+/* Options */
+$max-width: 1208;
+$grid_cols: 12;
+$grid_width: 1208;
+$grid_gutter: 40;
+$grid_col: 64;
+
+/* Colors */
+$yellow: #FFEC2B;
+
+//Gray colors (dark - light) - Based on https://davidwalsh.name/sass-color-variables-dont-suck
+$outerspace: #282E32;
+$dove_gray: #6E6E6E;
+$alto: #DDDDDD;
+$concrete: #F2F2F2;
+
+/* Set default color vars */
+$primary: $yellow;
+$secondary: #ff88aa;
+$comp: #f7bc8c;
+
+$theme: $primary;
+
+$text_color: $dove_gray;
+$text_color_light: #ffffff;
+$title_color: $outerspace;
+$link_color: $theme;
+$border_color: $alto;
+$input_border_color: $link_color;
+$bg_body: #fff;
+
+/* Text styles */
+$font-size: px-rem(20);
+$line-height: px-rem(32);
+
+$weight_light: 300;
+$weight_normal: normal;
+$weight_semi: 600;
+$weight_bold: bold;
+$weight_super: 900;
+
+$weight_default: $weight_normal;
+
+/* Fonts */
+$font_mono: 'alma_mono';
+$font_normal: 'helvetica neue', 'helvetica', arial, sans-serif;
+
+/* Responsive break points */
+$portraitPlus: "screen and (min-width: 768px)";
+$portrait: "screen and (min-width: 768px) and (max-width: 1023px)";//iPad inportrait mode +
+$landscape: "screen and (min-width: 1024px)  and (max-width: 1151px)";//iPad in landscape mode - MacBook Air
+$landscapePlus: "screen and (min-width: 1024px)";//iPad +
+$desktop: "screen and (min-width: 1152px)";//MacBook Air +
+$desktop_large: "screen and (min-width: 1440px)";//Over 15" Macbook

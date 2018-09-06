@@ -1,0 +1,115 @@
+/* ----------------
+  General
+---------------- */
+::selection {
+  background: #fff;
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: $weight_bold;
+}
+
+.invert-text {
+  background-color: #000;
+  color: #fff;
+  padding: 0 0.5rem;
+}
+
+/* ----------------
+  Headers
+---------------- */
+h1, h2, h3, h4, h5 {
+  font-family: $font_mono;
+  text-transform: uppercase;
+  font-weight: $weight_super;
+}
+
+h1,.h1 {
+  font-size: px-rem(40);
+  line-height: px-rem(36);
+  font-weight: $weight_super;
+  text-transform: uppercase;
+  margin: 0 0 px-rem(40);
+
+  @include mq($portraitPlus) {
+    font-size: px-rem(72);
+    line-height: px-rem(64);
+    margin: 0 0 px-rem(56);
+  }
+}
+
+h2,.h2 {
+  font-size: px-rem(48);
+  line-height: px-rem(56);
+  font-weight: $weight_super;
+  text-transform: uppercase;
+}
+
+h3,.h3 {
+  font-size: px-rem(40);
+  line-height: px-rem(48);
+  font-weight: $weight_super;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: px-rem(32);
+  line-height: px-rem(40);
+  font-weight: $weight_super;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: px-rem(24);
+  line-height: px-rem(32);
+  font-weight: $weight_bold;
+}
+
+/* ----------------
+  Content
+---------------- */
+.lead {
+  font-family: $font_mono;
+  text-transform: uppercase;
+  font-weight: $weight_super;
+  font-size: px-rem(20);
+  line-height: px-rem(32);
+  max-width: grid_px(8);
+
+  &:after {
+    content: '';
+    display: block;
+    height: 12px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background: transparent url('../img/dots-pattern.svg') repeat left top;
+  }
+}
+
+p {
+}
+
+blockquote {
+  font-size: px-rem(48);
+  line-height: px-rem(56);
+
+  p {
+    max-width: none;
+    padding: 0;
+  }
+}

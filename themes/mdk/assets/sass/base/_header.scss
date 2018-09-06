@@ -1,0 +1,21 @@
+/* ---- Header ---- */
+.site-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: px-rem(56);
+  margin-bottom: px-rem(80);
+}
+
+.logo {
+  &, svg {
+    display: block;
+  }
+}
+
+.svg-logo {
+  &__inner {
+    
+  }
+}
