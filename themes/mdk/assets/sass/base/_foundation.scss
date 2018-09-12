@@ -6,7 +6,8 @@ html {
   box-sizing: border-box;
 }
 
-img {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
@@ -23,4 +24,9 @@ body {
 
 .container {
   @include contain();
+}
+
+/* Smoothen image files just a bit */
+.smooth {
+  border-radius: 1px;
 }

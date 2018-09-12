@@ -7,7 +7,8 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: $link_color;
 
   &:hover {
     text-decoration: underline;
@@ -37,6 +38,11 @@ h1, h2, h3, h4, h5 {
   font-family: $font_mono;
   text-transform: uppercase;
   font-weight: $weight_super;
+  word-spacing: -0.4em;
+
+  &.light {
+    font-weight: normal;
+  }
 }
 
 h1,.h1 {
@@ -47,9 +53,9 @@ h1,.h1 {
   margin: 0 0 px-rem(40);
 
   @include mq($portraitPlus) {
-    font-size: px-rem(72);
-    line-height: px-rem(64);
-    margin: 0 0 px-rem(56);
+    font-size: px-rem(80);
+    line-height: px-rem(88);
+    margin: 0 0 px-rem(32);
   }
 }
 
@@ -58,13 +64,24 @@ h2,.h2 {
   line-height: px-rem(56);
   font-weight: $weight_super;
   text-transform: uppercase;
+  margin: 0 0 px-rem(32);
+
+  h1 + & {
+    margin-top: px-rem(-8);
+    margin-bottom: px-rem(48);
+  }
 }
 
 h3,.h3 {
-  font-size: px-rem(40);
-  line-height: px-rem(48);
+  font-size: px-rem(32);
+  line-height: px-rem(40);
   font-weight: $weight_super;
   text-transform: uppercase;
+  margin: 0 0 px-rem(32);
+
+  &.light,.light {
+    font-weight: normal;
+  }
 }
 
 h4 {
@@ -74,10 +91,11 @@ h4 {
   text-transform: uppercase;
 }
 
-h5 {
-  font-size: px-rem(24);
-  line-height: px-rem(32);
+h5,.h5 {
+  font-size: px-rem(20);
+  line-height: px-rem(24);
   font-weight: $weight_bold;
+  margin:  0 0 px-rem(16);
 }
 
 /* ----------------
@@ -88,20 +106,38 @@ h5 {
   text-transform: uppercase;
   font-weight: $weight_super;
   font-size: px-rem(20);
+  word-spacing: -0.4em;
   line-height: px-rem(32);
-  max-width: grid_px(8);
+  max-width: grid_px(7);
 
-  &:after {
-    content: '';
-    display: block;
-    height: 12px;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    background: transparent url('../img/dots-pattern.svg') repeat left top;
+  &.light {
+    font-weight: $weight_bold;
+  }
+
+  strong {
+    font-weight: $weight_super;
+  }
+
+  &--divider {
+    &:after {
+      content: '';
+      display: block;
+      height: 12px;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      background: transparent url('../img/dots-pattern.svg') repeat left top;
+    }
   }
 }
 
 p {
+  margin: 0 0 2rem;
+
+  &.small {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 blockquote {

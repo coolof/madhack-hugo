@@ -1,10 +1,110 @@
 {{ define "main" }}
-<div class="container">
-  <h1>Madhack 2018, woo!</h1>
+<article class="frontpage frontpage--mh2018 page">
+  <header class="page__header page__header--split mh2018-hero">
+    <div class="col">
+      <h1>Madhack 2018, woo!</h1>
 
-  <div class="lead">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <span class="invert-text">sunt in culpa qui officia deserunt</span> mollit anim id est laborum.
-  </div>
-</div>
+      <div class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident, <span class="invert-text">sunt in culpa qui officia deserunt</span> mollit anim id est laborum.
+      </div>
+    </div>
+  </header>
+
+  <section class="section frontpage__intro">
+    <div class="grid grid--2">
+      <div class="grid__item">
+        <h2 class="h1">Hög-tid för En hållbar jul</h2>
+        <h2 class="light">16-17 November 2018</h2>
+
+        <p class="lead">Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+        <p class="small gridmax-5">Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="grid__item">
+        <video src="pontus.mp4" autoplay loop mute poster="pontus.jpg"></video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section margin--large frontpage__usp">
+    <div class="section__inner">
+      <h5 class="frontpage__usp__title">Varför ska jag vara med på Madhack?</h5>
+
+      <div class="grid grid--4">
+        <div class="grid__item">
+          <img src="contact/contact-facebook.svg" alt="">
+          <h5>Knyta kontakter</h5>
+          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+        </div>
+        <div class="grid__item">
+          <img src="contact/contact-facebook.svg" alt="">
+          <h5>Träffa företag</h5>
+          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+        </div>
+        <div class="grid__item">
+          <img src="contact/contact-facebook.svg" alt="">
+          <h5>Lär dig något nytt</h5>
+          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+        </div>
+        <div class="grid__item">
+          <img src="contact/contact-facebook.svg" alt="">
+          <h5>För att det är kul!</h5>
+          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+        </div>
+      </div>
+
+      {{ if $.Site.Params.signup }}
+        <div class="frontpage__usp__action">
+          <a href="{{ $.Site.Params.signup }}">Anmäl dig</a> eller läs våra <a href="#faq">Frågor och svar</a>.
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section section--center margin--large frontpage__gro36">
+    <h2>Vi ses på GRO36!</h2>
+    <p class="lead light">Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere <a href="https://www.google.com/maps/place/GRO36/@57.7873205,14.2340531,17z/data=!3m1!4b1!4m5!3m4!1s0x465a6d10ba49255d:0xb2c00cb87e3e8989!8m2!3d57.7873205!4d14.2362418" target="_blank">Huskvarnavägen 82</a> velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+    <p class="lead light">Läs mer på <a href="http://gro36.se">gro36.se</a>.</p>
+  </section>
+
+  <section class="section margin--smaller frontpage__gro36-grid">
+    <div class="grogrid">
+      <div class="grogrid__item"><img class="smooth" src="gro36-coworking-jkpg-hq.jpg" alt="GRO36"></div>
+      <div class="grogrid__item"><img class="smooth" src="gro36-coworking-jonkoping-hq.jpg" alt="GRO36"></div>
+      <div class="grogrid__item"><img class="smooth" src="gro36-coworkingspace-hq.jpg" alt="GRO36"></div>
+      <div class="grogrid__item"><img class="smooth" src="gro36-kok-coworking-hq.jpg" alt="GRO36"></div>
+    </div>
+  </section>
+
+  <section class="section frontpage__gallery">
+    <div class="grid grid--3">
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh17-1.jpg" alt="Madhack 2017"></div>
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh17-2.jpg" alt="Madhack 2017"></div>
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh17-3.jpg" alt="Madhack 2017"></div>
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh17-4.jpg" alt="Madhack 2017"></div>
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh17-5.jpg" alt="Madhack 2017"></div>
+      <div class="grid__item grid__item--image"><img class="smooth" src="mh16-1.jpg" alt="Madhack 2016"></div>
+    </div>
+  </section>
+
+  <section class="section section--center frontpage__faq">
+    <h2>Frågor och svar</h2>
+
+    <ul class="faq gridmax-8">
+      <li class="faq__item">
+        <div class="faq__question">Måste jag kunna programmera för att vara med?</div>
+        <div class="faq__answer">Nej</div>
+      </li>
+      <li class="faq__item">
+        <div class="faq__question">Måste jag vara student?</div>
+        <div class="faq__answer">Nej, vem som helst är välkommen att anmäla sig. Som student spelar det heller ingen roll vad du studerar eller på vilken skola.</div>
+      </li>
+    </ul>
+  </section>
+
+  {{- partial "page-end.html" . -}}
+
+</article>
 
 {{ end }}

@@ -103,7 +103,7 @@ $vw: 1440;
   width: grid($cols);
 }
 
-@mixin btn($height: 3rem, $bg: #000, $bg_hover: lighten($bg,10), $color: #fff, $color_hover: $color, $fontSize: 12px, $display: inline-block, $outline: false, $radius: $height / 2) {
+@mixin btn($height: 3rem, $bg: #000, $bg_hover: lighten($bg,20), $color: #fff, $color_hover: $color, $fontSize: 12px, $display: inline-block, $outline: false, $radius: $height / 2) {
   display: $display;
   height: $height;
   color: $color;
@@ -116,6 +116,7 @@ $vw: 1440;
   text-align: center;
   cursor: pointer;
   user-select: none;
+  text-decoration: none;
 
   @if $radius {
     border-radius: $radius;
@@ -165,10 +166,70 @@ $vw: 1440;
   }
 }
 
+@mixin detail($target: after, $pattern: 'dots', $width: 8, $height: 8, $x: 'left', $y: 'top', $size: 'default', $position: true) {
+  @if $position {
+    position: relative;
+  }
 
-@mixin shadow($shadow1: 'normal', $shadow2: false, $size: px-rem(12), $background: $yellow) {
+  &:#{$target} {
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    @if $pattern == 'dots' {
+      @if $size == 'default' {
+        $size: 16;
+      }
+
+      background: transparent url('../img/dots-pattern.png') repeat center center;
+      background-size: 32px 32px;
+      width: px-rem($width * $size);
+      height: px-rem($height * $size);
+
+      @if $x == 'left' {
+        left: px-rem(-24);
+      }
+      @if $x == 'right' {
+        right: px-rem(-28);
+      }
+
+      @if $y == 'top' {
+        top: px-rem(-24);
+      }
+      @if $y == 'bottom' {
+        bottom: px-rem(-28);
+      }
+    }
+    @if $pattern == 'lines' {
+      @if $size == 'default' {
+        $size: 16;
+      }
+
+      background: transparent url('../img/lines-pattern.svg') repeat top left;
+      width: px-rem($width * $size);
+      height: px-rem($height * $size);
+
+      @if $x == 'left' {
+        left: px-rem(-28);
+      }
+      @if $x == 'right' {
+        right: px-rem(-28);
+      }
+
+      @if $y == 'top' {
+        top: px-rem(-28);
+      }
+      @if $y == 'bottom' {
+        bottom: px-rem(-28);
+      }
+    }
+  }
+}
+
+
+@mixin shadow($shadow1: 'normal', $shadow2: false, $size: px-rem(12), $background: $yellow, $width: 2px) {
   position: relative;
-  box-shadow: inset 0px 0px 0px 2px #000;
+  box-shadow: inset 0px 0px 0px $width #000;
 
   @if $shadow1 {
     &:before {
@@ -179,7 +240,7 @@ $vw: 1440;
       bottom: $size * -1;
       left: $size;
       top: $size;
-      box-shadow: inset 0px 0px 0px 2px #000;
+      box-shadow: inset 0px 0px 0px $width #000;
 
       @if $shadow1 == 'dots' {
         background: $background url('../img/dots-pattern.svg') repeat 7px -6px;

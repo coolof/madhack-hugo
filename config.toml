@@ -1,4 +1,4 @@
-baseURL = "http://madhack.se/"
+baseURL = "https://nifty-newton-1abe66.netlify.com/"
 languageCode = "sv-se"
 title = "Madhack"
 theme = "mdk"

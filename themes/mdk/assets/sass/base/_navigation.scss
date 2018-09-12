@@ -43,13 +43,6 @@
     }
 
     &:hover {
-      a {
-        color: #fff;
-      }
-
-      &:before {
-        width: calc(100% + 1rem);
-      }
     }
 
     &--active {

@@ -1,10 +1,73 @@
 {{ define "main" }}
-<div class="container">
-  <h1>Madhack 2018, woo!</h1>
+<article class="contact page">
+  <header class="contact__header page__header page__header--split">
+    <div class="col">
+      <h1>Kontakta<br/>Madhack</h1>
 
-  <div class="lead">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <span class="invert-text">sunt in culpa qui officia deserunt</span> mollit anim id est laborum.
-  </div>
-</div>
+      <ul class="contact__social">
+        <li class="contact__social__email">
+          <a href="mailto:hej@madhack.se">
+            <img src="contact-email.svg" alt="Email">
+            <span>hej@madhack.se</span>
+          </a>
+        </li>
+        <li class="contact__social__facebook">
+          <a href="https://www.facebook.com/madhackjkpg" target="_blank">
+            <img src="contact-facebook.svg" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li class="contact__social__instagram">
+          <a href="https://www.instagram.com/madhackjkpg/" target="_blank">
+            <img src="contact-instagram.svg" alt="Instagram">
+            <span>Instagram</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col col--image">
+      <img src="contact-emoji.png" alt="Contact">
+    </div>
+  </header>
+
+  <section class="section section--center contact__press">
+    <h2>Press</h2>
+    <p class="lead light">Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet.</p>
+    <p class="lead light">
+      <strong>Presskontakt </strong><br>
+      Jesper Källgård<br>
+      <a href="mailto:jesper.kallgard@sogeti.se"> jesper.kallgard@sogeti.se</a><br>
+ 070 - 511 66 18
+    </p>
+  </section>
+
+  {{/*<section class="section section--center-self margin--smaller contact__press gridmax-10">
+    <div class="grid grid--2">
+      <div class="grid__item grid__item--image">
+        <a href="enhallbarjul-large.jpg" target="_blank">
+          <img class="smooth" src="enhallbarjul-preview.jpg" alt="En Hållbar Jul">
+        </a>
+      </div>
+      <div class="grid__item grid__item--image">
+        <a href="pontus-large.jpg" target="_blank">
+          <img class="smooth" src="pontus-preview.jpg" alt="Pontus">
+        </a>
+      </div>
+      <div class="grid__item grid__item--image">
+        <a href="madhack-logo.ai">
+          <img src="press-logo.png" alt="Logotyp">
+        </a>
+      </div>
+      <div class="grid__item grid__item--image">
+        <a href="">
+          <img src="press-kit.png" alt="Presskit">
+        </a>
+      </div>
+    </div>
+  </section>*/}}
+
+  {{- partial "page-end.html" . -}}
+</article>
 
 {{ end }}

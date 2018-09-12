@@ -1,0 +1,78 @@
+.faq {
+  width: 100%;
+}
+
+.faq__item {
+  box-shadow: inset 0px 0px 0px 2px #000;
+  background-color: $primary;
+  margin-bottom: 1rem;
+  text-align: left;
+  transition: all 0.4s ease;
+  padding: 2px;
+
+  &:before {
+    content: '';
+    right: 1rem;
+    bottom: 1rem;
+    transition: all 0.4s 0.2s ease;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+}
+
+.faq__question {
+  position: relative;
+  font-family: $font_mono;
+  font-size: px-rem(14);
+  line-height: px-rem(20);
+  font-weight: $weight_bold;
+  text-transform: uppercase;
+  padding: px-rem(20) 2rem 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.4s 0.1s ease;
+
+  &:after {
+    @include icon-stroke($icon: $chevron_right, $background-position: center center, $color: #000, $line-height: 24px, $padding: false);
+
+    content: '';
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translateY(-50%);
+    transition: all 0.3s 0.2s ease, right 0.3s 0s ease;
+  }
+
+  &:hover{
+    background-color: #fff;
+  }
+}
+
+.faq__answer {
+  display: none;
+  padding: 0 2rem 1.5rem;
+}
+
+
+.faq__item--open {
+  background-color: #fff;
+  margin: 1.5rem -0.5rem;
+  @include shadow($shadow1: 'lines', $size: px-rem(8));
+
+  .faq__question {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: px-rem(20);
+    line-height: 2rem;
+    font-weight: $weight_super;
+
+    &:after {
+      transform: translateY(-50%) rotate(90deg);
+      right: 1.25rem;
+    }
+  }
+
+  .faq__answer {
+    //display: block;
+  }
+}

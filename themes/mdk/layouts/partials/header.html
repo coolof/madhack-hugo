@@ -1,7 +1,7 @@
 <header class="site-header container">
   {{/* Logo */}}
   <a class="site-header__logo logo" href="{{ .Site.BaseURL }}">
-    {{- partial "logo.html" . -}}
+    {{- partial "logo-margin.html" . -}}
   </a>
 
   {{/* Navigation */}}
@@ -12,9 +12,7 @@
 
         {{ range .Site.Menus.main }}
           <li class="menu__item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} menu__item--active{{end}}">
-            <a href="{{ .URL }}" title="{{ .Name }} page">
-              {{ .Name }}
-            </a>
+            <a href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}

@@ -9,10 +9,7 @@ $grid_col: 64;
 $yellow: #FFEC2B;
 
 //Gray colors (dark - light) - Based on https://davidwalsh.name/sass-color-variables-dont-suck
-$outerspace: #282E32;
-$dove_gray: #6E6E6E;
-$alto: #DDDDDD;
-$concrete: #F2F2F2;
+$textgray: #575762;
 
 /* Set default color vars */
 $primary: $yellow;
@@ -21,13 +18,11 @@ $comp: #f7bc8c;
 
 $theme: $primary;
 
-$text_color: $dove_gray;
+$text_color: #000;
 $text_color_light: #ffffff;
-$title_color: $outerspace;
-$link_color: $theme;
-$border_color: $alto;
-$input_border_color: $link_color;
-$bg_body: #fff;
+$title_color: #000;
+$link_color: #000;
+$border_color: #000;
 
 /* Text styles */
 $font-size: px-rem(20);
@@ -44,6 +39,9 @@ $weight_default: $weight_normal;
 /* Fonts */
 $font_mono: 'alma_mono';
 $font_normal: 'helvetica neue', 'helvetica', arial, sans-serif;
+
+/* Misc */
+$easing_back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 /* Responsive break points */
 $portraitPlus: "screen and (min-width: 768px)";

@@ -1,0 +1,38 @@
+.about {
+
+}
+
+.about__contactstart {
+  &__image {
+    @include detail($pattern: 'lines', $x: false, $y: false, $width: 10, $height: 10);
+    @include detail($target: 'before', $x: 'left', $y: 'bottom', $width: 11, $height: 11);
+    margin-bottom: px-rem(56);
+
+    img {
+      display: block;
+    }
+
+    &:after {
+      right: -3rem;
+      top: -3rem;
+    }
+  }
+}
+
+.about__contactlist {
+  .grid {
+    padding: 0px 1.5rem;
+    grid-row-gap: 4rem;
+  }
+  .grid__item {
+    max-width: 330px;
+    justify-self: start;
+
+    &:nth-child(3n - 1) {
+      justify-self: center;
+    }
+    &:nth-child(4n - 1) {
+      justify-self: end;
+    }
+  }
+}

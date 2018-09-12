@@ -1,0 +1,57 @@
+.section {
+  @include contain();
+  margin-top: px-rem(96);
+
+  *:not(.grid):last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section--wide {
+  max-width: 1440px;
+}
+
+.section--center {
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.section--center-self {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin {
+  &--large {
+    margin-top: px-rem(128);
+  }
+  &--small {
+    margin-top: px-rem(72);
+  }
+  &--smaller {
+    margin-top: px-rem(64);
+  }
+}
+
+.padding--none {
+  padding: 0;
+}
+
+
+/* GENERAL SECTIONS (Partials) */
+.page__end {
+  margin: 7rem auto;
+
+  p:not(.small) {
+    max-width: grid_px(8);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p.small {
+    max-width: grid_px(7);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

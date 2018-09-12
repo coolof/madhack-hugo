@@ -12,10 +12,83 @@
   &, svg {
     display: block;
   }
+
+  &:hover {
+    .svg-logo__inner {
+      * {
+        animation: wave infinite 0.7s ease;
+      }
+    }
+  }
 }
 
-.svg-logo {
+.logo .svg-logo {
   &__inner {
-    
+    @for $i from 1 to 8 {
+      *:nth-child(#{$i}) {
+        animation-delay: ($i * 0.03s - 0.03);
+      }
+    }
+  }
+}
+
+
+.menu a,
+.btn {
+  .letter {
+    display: inline-block;
+
+    &--space {
+      margin-right: 0.6em;
+    }
+  }
+
+  &:hover {
+    span {
+      animation: wave 0.35s ease;
+    }
+  }
+
+  span {
+    @for $i from 1 through 100 {
+      &:nth-child(#{$i}) {
+        animation-delay: ($i * 0.03s - 0.03);
+      }
+    }
+  }
+
+  &.item--long {
+    a {
+      animation-duration: 0.25s;
+    }
+
+    span {
+      @for $i from 1 through 100 {
+        &:nth-child(#{$i}) {
+          animation-delay: ($i * 0.02s - 0.02);
+        }
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes wavebig {
+  0%,50%,100% {
+    transform: translate3d(0,0px,0);
+  }
+  25% {
+    transform: translate3d(0,-8px,0);
+  }
+  75% {
+    transform: translate3d(0,8px,0);
   }
 }

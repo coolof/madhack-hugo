@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://madhack.se/categories/</loc>
+    <loc>https://nifty-newton-1abe66.netlify.com/contact/</loc>
+    <lastmod>2018-09-06T08:34:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nifty-newton-1abe66.netlify.com/about/</loc>
+    <lastmod>2018-09-06T08:34:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nifty-newton-1abe66.netlify.com/</loc>
+    <lastmod>2018-09-05T20:13:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nifty-newton-1abe66.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://madhack.se/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://madhack.se/tags/</loc>
+    <loc>https://nifty-newton-1abe66.netlify.com/tags/</loc>
     <priority>0</priority>
   </url>
   

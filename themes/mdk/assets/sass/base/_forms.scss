@@ -20,7 +20,7 @@
   transition: all 0.2s ease, width 0s, height 0s;
 
   &::placeholder {
-    color: $dove_gray;
+    color: $textgray;
   }
 
   &:hover {
@@ -30,7 +30,7 @@
   &:focus,
   &:active {
     outline: none;
-    border-color: $outerspace;
+    border-color: #000;
     box-shadow: 0px 0px 0px 4px rgba($primary, 0.5);
     border-radius: 0.5px;
   }
@@ -99,7 +99,7 @@ input[type="checkbox"], input[type="radio"] {
   &:focus:before,
   &:active:before {
     outline: none;
-    border-color: $outerspace;
+    border-color: #000;
     box-shadow: 0px 0px 0px 4px rgba($primary, 0.5);
   }
 }
@@ -136,7 +136,7 @@ button {
 
 label {
   display: block;
-  color: $outerspace;
+  color: #000;
   margin-bottom: 1rem;
 
   //Add break after label without forcing block on label or input

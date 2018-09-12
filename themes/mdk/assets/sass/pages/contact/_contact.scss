@@ -1,0 +1,72 @@
+.contact {
+
+}
+
+.contact__social {
+  font-family: $font_mono;
+  font-size: px-rem(40);
+  line-height: px-rem(48);
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: px-rem(32);
+
+  li {
+    margin-bottom: 2rem;
+  }
+
+  a {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+
+    img {
+      margin-right: px-rem(20);
+    }
+
+    span {
+      display: block;
+      margin-top: 0.5rem;
+      box-shadow: 0px 2px 0px #000;
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      box-shadow: 0px 4px 0px #000;
+    }
+  }
+}
+
+.contact__press {
+  .lead {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .grid__item {
+    a {
+      display: block;
+
+      @media (hover: hover) {
+        &:hover img {
+          transform: scale(0.95);
+        }
+      }
+    }
+
+    @media (hover: hover) {
+      img {
+        transition: all 0.4s $easing_back;
+      }
+    }
+
+    &:nth-child(2) a {
+      @include detail($width: 7, $x: 'right');
+    }
+    &:nth-child(3) a {
+      @include detail($pattern: 'lines', $width: 10, $height: 10);
+    }
+  }
+}

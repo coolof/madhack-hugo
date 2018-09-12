@@ -1,0 +1,24 @@
+.page__header {
+  @include contain();
+}
+
+.page__header--split {
+  display: flex;
+  flex-flow: row wrap;
+
+  .col {
+    flex: none;
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding-right: px-rem($grid_gutter / 2);
+    }
+    &:nth-child(even) {
+      padding-left: px-rem($grid_gutter / 2);
+    }
+  }
+
+  .col--image {
+    margin-top: -2rem;
+  }
+}
