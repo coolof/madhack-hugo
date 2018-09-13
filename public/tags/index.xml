@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Madhack</title>
-    <link>https://nifty-newton-1abe66.netlify.com/tags/</link>
+    <link>https://madhack.se/tags/</link>
     <description>Recent content in Tags on Madhack</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>sv-se</language>
     
-	<atom:link href="https://nifty-newton-1abe66.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://madhack.se/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

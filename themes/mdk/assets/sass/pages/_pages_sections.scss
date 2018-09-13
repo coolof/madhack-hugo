@@ -11,6 +11,10 @@
   max-width: 1440px;
 }
 
+.section--full {
+  max-width: none;
+}
+
 .section--center {
   text-align: center;
   display: flex;

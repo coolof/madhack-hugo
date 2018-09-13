@@ -13,12 +13,13 @@
   <section class="section frontpage__intro">
     <div class="grid grid--2">
       <div class="grid__item">
-        <h2 class="h1">Hög-tid för En hållbar jul</h2>
-        <h2 class="light">16-17 November 2018</h2>
+        <h2 class="h1">Hög tid för en hållbar jul</h2>
 
-        <p class="lead">Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p class="lead">Madhack kommer ta med dig på en unik resa i en kreativ process. Det är inte så invecklat som det låter, men det är garanterat ett hackathon som skiljer sig från mängden. Vi startar på GRO36 i Jönköping fredagen den 16-17 nov kl 17.00. </p>
 
-        <p class="small gridmax-5">Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Den här gången handlar Madhack om att göra julen mer hållbar. För visst är det härligt att fira jul. Men vi tycker också att det är dags för ett hållbart firande. Där vi köper mindre saker ingen vill ha, slänger mindre mat och där fler kan delta.</p>
+
+        <p>16-17 november kör vi, <a href="https://madhack2018.confetti.events/signup" target="_blank">anmäl dig idag!</a></p>
       </div>
       <div class="grid__item">
         <video src="pontus.mp4" autoplay loop mute poster="pontus.jpg"></video>
@@ -34,28 +35,24 @@
         <div class="grid__item">
           <img src="contact/contact-facebook.svg" alt="">
           <h5>Knyta kontakter</h5>
-          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
         </div>
         <div class="grid__item">
           <img src="contact/contact-facebook.svg" alt="">
-          <h5>Träffa företag</h5>
-          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+          <h5>För en god sak</h5>
         </div>
         <div class="grid__item">
           <img src="contact/contact-facebook.svg" alt="">
           <h5>Lär dig något nytt</h5>
-          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
         </div>
         <div class="grid__item">
           <img src="contact/contact-facebook.svg" alt="">
           <h5>För att det är kul!</h5>
-          <p class="small">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
         </div>
       </div>
 
       {{ if $.Site.Params.signup }}
         <div class="frontpage__usp__action">
-          <a href="{{ $.Site.Params.signup }}">Anmäl dig</a> eller läs våra <a href="#faq">Frågor och svar</a>.
+          <a href="{{ $.Site.Params.signup }}" target="_blank">Anmäl dig</a> eller läs våra <a href="#faq">Frågor och svar</a>.
         </div>
       {{ end }}
     </div>
@@ -63,7 +60,7 @@
 
   <section class="section section--center margin--large frontpage__gro36">
     <h2>Vi ses på GRO36!</h2>
-    <p class="lead light">Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere <a href="https://www.google.com/maps/place/GRO36/@57.7873205,14.2340531,17z/data=!3m1!4b1!4m5!3m4!1s0x465a6d10ba49255d:0xb2c00cb87e3e8989!8m2!3d57.7873205!4d14.2362418" target="_blank">Huskvarnavägen 82</a> velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p class="lead light">GRO36 är ett coworkingspace och mötesplats i Jönköping där startups, entreprenörer, frilansare och konsulter delar på nätverk och affärer i en dynamisk arbetsmiljö bland palmer, whiteboards och pingisbord. Lokalerna är designade för att maximera din produktivitet och boosta kreativitet.</p>
 
     <p class="lead light">Läs mer på <a href="http://gro36.se">gro36.se</a>.</p>
   </section>
@@ -88,7 +85,7 @@
     </div>
   </section>
 
-  <section class="section section--center frontpage__faq">
+  <section class="section section--center frontpage__faq" id="faq">
     <h2>Frågor och svar</h2>
 
     <ul class="faq gridmax-8">
@@ -103,7 +100,40 @@
     </ul>
   </section>
 
-  {{- partial "page-end.html" . -}}
+  <section class="section section--full frontpage__organizers">
+    <div class="container">
+      <h2>Arrangörer</h2>
+
+      <div class="grid grid--3 gridmax-10">
+        <div class="grid__item">
+          <div class="organizer__logo">
+            <img src="logo-ny.svg" alt="NY Collective">
+          </div>
+          <h5>NY Collective</h5>
+          <p class="small">Ny Collective är en reklambyrå, webbyrå och studio som gillar att ha kul och göra bra grejer.</p>
+          <p class="small"><a href="https://ny.se" target="_blank">Läs mer om NY Collective</a></p>
+        </div>
+        <div class="grid__item">
+          <div class="organizer__logo">
+            <img src="logo-sogeti.svg" alt="Sogeti">
+          </div>
+          <h5>Sogeti</h5>
+          <p class="small">Sogeti levererar IT-konsulttjänster på den lokala marknaden. Alltså allt ifrån AI-utveckling till användningstester.</p>
+          <p class="small"><a href="https://sogeti.se" target="_blank">Läs mer om Sogeti</a></p>
+        </div>
+        <div class="grid__item">
+          <div class="organizer__logo">
+            <img src="logo-gro.svg" alt="GRO36">
+          </div>
+          <h5>GRO36</h5>
+          <p class="small">GRO36 är ett co-working space (kontorshotell) i Jönköping för dig som driver en startup, frilansar eller arbetar på distans.</p>
+          <p class="small"><a href="https://gro36.se" target="_blank">Läs mer om GRO36</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{/*{{- partial "page-end.html" . -}}*/}}
 
 </article>
 

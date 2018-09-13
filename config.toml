@@ -1,7 +1,7 @@
-baseURL = "https://nifty-newton-1abe66.netlify.com/"
+baseURL = "https://madhack.se/"
 languageCode = "sv-se"
 title = "Madhack"
 theme = "mdk"
 
 [params]
-  signup = "http://www.madhack.se"
+  signup = "https://madhack2018.confetti.events/signup"

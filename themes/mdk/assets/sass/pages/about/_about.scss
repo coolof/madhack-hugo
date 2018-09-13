@@ -2,6 +2,13 @@
 
 }
 
+.about__header {
+  h2 {
+    font-size: px-rem(44);
+    line-height: px-rem(52);
+  }
+}
+
 .about__contactstart {
   &__image {
     @include detail($pattern: 'lines', $x: false, $y: false, $width: 10, $height: 10);
@@ -25,13 +32,14 @@
     grid-row-gap: 4rem;
   }
   .grid__item {
+    width: 100%;
     max-width: 330px;
     justify-self: start;
 
     &:nth-child(3n - 1) {
       justify-self: center;
     }
-    &:nth-child(4n - 1) {
+    &:nth-child(3n+3) {
       justify-self: end;
     }
   }
