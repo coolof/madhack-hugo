@@ -30,3 +30,14 @@ body {
 .smooth {
   border-radius: 1px;
 }
+
+/* Lazy load images styles */
+img:not([src]) {
+	visibility: hidden;
+}
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+	img:-moz-loading {
+		visibility: hidden;
+	}
+}
