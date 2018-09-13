@@ -10,6 +10,18 @@
     </div>
   </header>
 
+  {{ $image := (.Page.Resources.GetMatch "gro36-coworking-jkpg-hq.jpg") }}
+  {{ $resized := $image.Resize "100x" }}
+    <img
+  alt="100%x200"
+  src="{{ $resized.Permalink }}"
+  data-src="{{ $image.Permalink }}"
+  class="lazyload"
+  width="{{ $image.Width }}" height="{{ $image.Height }}" />
+
+  {{ partial "lazyimage" (dict "src" "**/contact-emoji.png" "alt" "Gro" ) }}
+
+
   <section class="section frontpage__intro">
     <div class="grid grid--2">
       <div class="grid__item">
