@@ -27,7 +27,7 @@
     </div>
 
     <div class="col col--image">
-      <img src="contact-emoji.png" alt="Contact">
+      {{ partial "lazyimage" (dict "src" ($.Param "hero") "alt" "Contact" ) }}
     </div>
   </header>
 

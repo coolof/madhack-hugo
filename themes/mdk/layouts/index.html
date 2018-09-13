@@ -10,18 +10,6 @@
     </div>
   </header>
 
-  {{ $image := (.Page.Resources.GetMatch "gro36-coworking-jkpg-hq.jpg") }}
-  {{ $resized := $image.Resize "100x" }}
-    <img
-  alt="100%x200"
-  src="{{ $resized.Permalink }}"
-  data-src="{{ $image.Permalink }}"
-  class="lazyload"
-  width="{{ $image.Width }}" height="{{ $image.Height }}" />
-
-  {{ partial "lazyimage" (dict "src" "**/contact-emoji.png" "alt" "Gro" ) }}
-
-
   <section class="section frontpage__intro">
     <div class="grid grid--2">
       <div class="grid__item">
@@ -35,7 +23,8 @@
       </div>
       <div class="grid__item">
         {{/*<video src="pontus.mp4" autoplay loop mute poster="pontus.jpg"></video>*/}}
-        <img class="lazyload" src="movie-placeholder.png" alt="Placeholder">
+
+        {{ partial "lazyimage" (dict "src" ($.Param "intro") "alt" "Movie placeholder" ) }}
       </div>
     </div>
   </section>
@@ -80,41 +69,21 @@
 
   <section class="section margin--smaller frontpage__gro36-grid">
     <div class="grogrid">
-      <div class="grogrid__item">
-        <img class="smooth lazyload" src="gro36-coworking-jkpg-hq.jpg" alt="GRO36">
-      </div>
-      <div class="grogrid__item">
-        <img class="smooth lazyload" src="gro36-coworking-jonkoping-hq.jpg" alt="GRO36">
-      </div>
-      <div class="grogrid__item">
-        <img class="smooth lazyload" src="gro36-coworkingspace-hq.jpg" alt="GRO36">
-      </div>
-      <div class="grogrid__item">
-        <img class="smooth lazyload" src="gro36-kok-coworking-hq.jpg" alt="GRO36">
-      </div>
+      {{ range $i, $path := $.Param "gro" }}
+        <div class="grogrid__item">
+          {{ partial "lazyimage" (dict "src" $path "alt" (print "gro36-" $i) "nosize" true ) }}
+        </div>
+      {{ end }}
     </div>
   </section>
 
   <section class="section frontpage__gallery">
     <div class="grid grid--3">
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh17-1.jpg" alt="Madhack 2017">
-      </div>
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh17-2.jpg" alt="Madhack 2017">
-      </div>
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh17-3.jpg" alt="Madhack 2017">
-      </div>
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh17-4.jpg" alt="Madhack 2017">
-      </div>
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh17-5.jpg" alt="Madhack 2017">
-      </div>
-      <div class="grid__item grid__item--image">
-        <img class="smooth lazyload" src="mh16-1.jpg" alt="Madhack 2016">
-      </div>
+      {{ range $i, $path := $.Param "gallery" }}
+        <div class="grid__item grid__item--image">
+          {{ partial "lazyimage" (dict "src" $path "alt" (print "madhack-" $i) ) }}
+        </div>
+      {{ end }}
     </div>
   </section>
 

@@ -8,13 +8,13 @@
     </div>
 
     <div class="col col--image">
-      <img class="lazyload" src="about-mad.png" alt="MAD Mark">
+      {{ partial "lazyimage" (dict "src" ($.Param "hero") "alt" "MAD Mark" ) }}
     </div>
   </header>
 
   <section class="section section--center about__contactstart">
     <div class="about__contactstart__image gridmax-10">
-      <img class="lazyload" src="about-group-placeholder.png" alt="">
+      {{ partial "lazyimage" (dict "src" ($.Param "group") "alt" "Group image" ) }}
     </div>
 
     <h2>Vi är Madhack</h2>
@@ -87,7 +87,7 @@
   <section class="section section--wide padding--none margin--smaller about__event about__madhack16">
     <div class="pushgrid pushgrid--left">
       <div class="pushgrid__col pushgrid__col--image">
-        <img class="lazyload" src="about-mh2016.jpg" alt="Madhack 2016">
+        {{ partial "lazyimage" (dict "src" ($.Param "mh16") "alt" "Madhack 2016" ) }}
       </div>
 
       <div class="pushgrid__col gridmax-6">
@@ -102,7 +102,7 @@
   <section class="section section--wide padding--none margin--smaller about__event about__madhack16">
     <div class="pushgrid pushgrid--right">
       <div class="pushgrid__col pushgrid__col--image">
-        <img class="lazyload" src="about-mh2017.jpg" alt="Madhack 2017">
+        {{ partial "lazyimage" (dict "src" ($.Param "mh17") "alt" "Madhack 2017" ) }}
       </div>
 
       <div class="pushgrid__col gridmax-6">

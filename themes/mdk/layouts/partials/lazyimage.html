@@ -1,14 +1,8 @@
-{{ $image := (.Page.Resources.GetMatch .src) }}
+{{ $image := resources.Get .src }}
 {{ $resized := $image.Resize "100x" }}
 
-  {{ .src }}, {{ .alt }}
-
-  <img alt="{{ .alt }}"
+<img alt="{{ .alt }}"
 src="{{ $resized.Permalink }}"
 data-src="{{ $image.Permalink }}"
 class="lazyload"
-width="{{ $image.Width }}" height="{{ $image.Height }}" />
-
-{{ with $image }}
-  <img src="{{ .RelPermalink }}" alt="">
-{{ end }}
+{{ if not .nosize }}width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} />
