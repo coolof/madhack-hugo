@@ -91,14 +91,12 @@
     <h2>Frågor och svar</h2>
 
     <ul class="faq gridmax-8">
-      <li class="faq__item">
-        <div class="faq__question">Måste jag kunna programmera för att vara med?</div>
-        <div class="faq__answer">Nej</div>
-      </li>
-      <li class="faq__item">
-        <div class="faq__question">Måste jag vara student?</div>
-        <div class="faq__answer">Nej, vem som helst är välkommen att anmäla sig. Som student spelar det heller ingen roll vad du studerar eller på vilken skola.</div>
-      </li>
+      {{ range $item := $.Param "faq" }}
+        <li class="faq__item">
+          <div class="faq__question">{{ $item.question }}</div>
+          <div class="faq__answer">{{ $item.answer }}</div>
+        </li>
+      {{ end }}
     </ul>
   </section>
 

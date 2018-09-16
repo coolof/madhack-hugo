@@ -41,3 +41,11 @@ img:not([src]) {
 		visibility: hidden;
 	}
 }
+
+.lazyload {
+  image-rendering: pixelated;
+}
+
+.lazyloaded {
+  image-rendering: auto;
+}

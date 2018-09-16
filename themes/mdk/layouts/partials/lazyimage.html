@@ -1,5 +1,7 @@
 {{ $image := resources.Get .src }}
-{{ $resized := $image.Resize "100x" }}
+{{ $resizeWidth := (div $image.Width  8) }}
+{{ $resizeVal := "100x Gaussian" }}
+{{ $resized := $image.Resize $resizeVal }}
 
 <img alt="{{ .alt }}"
 src="{{ $resized.Permalink }}"
