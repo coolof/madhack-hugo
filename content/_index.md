@@ -12,7 +12,9 @@ solution:
     img: vr.png
 subject:
   - name: matsvinn
-    fact: fakta matsvinn
+    fact: Varje år slänger varje svensk ungefär 45kg mat – alltså totalt 450 000 ton mat. Svinnet är som störst under julen. Ett minskat matsvinn skulle inte enbart vara bra för miljön utan skulle kunna spara ett hushåll tusentals kronor om året.
+    facturl: "https://www.livsmedelsverket.se/matvanor-halsa--miljo/miljo/ta-hand-om-maten-minska-svinnet/tips-minska-matsvinnet"
+    factsource: Livsmedelsverket
     img: food.png
   - name: konsumtion
     fact: fakta konsumtion
@@ -26,28 +28,31 @@ gallery: ["images/mh17-1.jpg","images/mh17-2.jpg","images/mh17-3.jpg","images/mh
 faq:
   -
     question: "Måste jag kunna programmera för att vara med?"
-    answer: "Nej!"
-  -
-    question: "När är eventet?"
-    answer: "Eventet är 16-17 November 2018"
+    answer: Nej! Programmerare är bra att ha i sitt team som ett stöd på att lösningen går att genomföra. Det främst betygskritiriet från juryn är dock hur bra idén är - inte hur ni som grupp tänkt/kan förverkliga den.
   -
     question: "Måste jag vara student?"
-    answer: "Nej, vem som helst är välkommen att anmäla sig. Som student spelar det heller ingen roll vad du studerar eller på vilken skola du går."
+    answer: Nej, vem som helst är välkommen att anmäla sig. Som student spelar det heller ingen roll vad du studerar eller på vilken skola du går.
+  -
+    question: Hur delas lagen in?
+    answer: Lagen kommer att vara lottade. Själva lottningen sker i flera steg. Dels vill vi se till så lagen innehåller alla roller (grafiker, programmerare osv.) men även ge en bra blandning av studenter, reklamare osv.
   -
     question: "Hur anmäler jag mig?"
-    answer: Du anmäler dig genom att klicka på knappen "Anmäl mig" längst upp på den här sidan.
+    answer: Du anmäler dig [här](https://madhack2018.confetti.events/signup). Anmälan sköts via tjänsten Confetti och du betalar direkt i samband med din anmälan.
+  -
+    question: Vi vill anmäla oss som ett lag, går det?
+    answer: Ja. Med det sagt så vill vi helst lotta lagen för att få till en bra mix för alla deltagare. Anmäl er [var för sig](https://madhack2018.confetti.events/signup) och [skicka sedan ett mail till oss](mailto:hej@madhack.se) med alla lagmedlemmarnas namn och eventuellt lagnamn.
   -
     question: "Vad kostar det?"
-    answer: "Eventet kostar 150 SEK / person"
+    answer: "Det kostar 150kr per person."
   -
     question: "Vad ingår i priset?"
-    answer: "Eventet kommer bjuda på många roliga stunder där du tillsammans med ditt team för använda hela din innovationskraft. På fredagen kommer vi att köpa middag till alla deltagare som deltar på vår After Work på GRO36 och på lördagen serverar vi frukost, lunch och middag."
+    answer: "Utöver många roliga stunder där du tillsammans med ditt team får använda hela er innovationskraft ingår mat och dryck. På fredagen bjuder vi på pizza och öl och på lördagen enklare frukost, lunch och middag. Det kommer även att finnas tillgång till dryck och snacks under hela eventet."
   -
-    question: "Vart är eventet?"
-    answer: "Eventet är på GRO36 Coworking space i Jönköping. Adress: Huskvarnavägen 84, 554 66 Jönköping"
+    question: "Vi vill sponsra Madhack, vem kontaktar vi?"
+    answer: Skicka ett mail till [hej@madhack.se](mailto:hej@madhack.se). Fler kontaktuppgifter [hittar du här](/contact).
   -
-    question: "Vilka är arrangörerna?"
-    answer: "Detta event arrangeras av Sogeti, NY och GRO36"
+    question: "Har ni någon presskontakt?"
+    answer: Ja, kontakta Jesper Källgård [på mail](mailti:jesper.kallgard@sogeti.se) eller telefon 070 - 511 66 18.
 resources:
   - name: gro
     src: "/images/mh17-1.jpg"

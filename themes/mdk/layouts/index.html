@@ -1,43 +1,34 @@
 {{ define "main" }}
 <article class="frontpage frontpage--mh2018 page">
-  <header class="page__header page__header--split mh2018-hero">
-    <div class="col">
+  <header class="section section--full margin--none section--generator">
+    <div class="container">
       <div class="generator">
-        <ul class="generator__options generator__solution">
-          <li class="lead"><strong>Gör</strong></li>
+        <ul class="generator__options generator__options--solution">
           {{ range $solution := $.Param "solution" }}
             <li class="generator__option__option">{{ $solution.name }}</li>
           {{ end }}
         </ul>
-        <ul class="generator__options generator__subject">
-          <li class="lead"><strong>Om</strong></li>
+        <ul class="generator__options generator__options--subject">
           {{ range $subject := $.Param "subject" }}
             <li class="generator__options__option">{{ $subject.name }}</li>
           {{ end }}
         </ul>
-        <ul class="generator__options generator__fact">
-          <li class="lead"><strong>Varför?</strong></li>
-          {{ range $subject := $.Param "subject" }}
-            <li class="generator__option__option">{{ $subject.fact }}</li>
-          {{ end }}
-        </ul>
       </div>
-    </div>
 
-    <div class="col">
-      <div class="generator generator--slideshow">
-        <ul class="generator__img generator__solution-img">
-          <li class="lead"><strong>Gör - bild</strong></li>
-          {{ range $solution := $.Param "solution" }}
-            <li class="generator__option__option">{{ $solution.img }}</li>
-          {{ end }}
-        </ul>
-        <ul class="generator__options generator__subject">
-          <li class="lead"><strong>Om - bild</strong></li>
+      <div class="generated">
+        <h1>Gör <span class="generated__value generated__value--solution">en app</span> <br>
+        om <span class="generated__value generated__value--subject">matsvinn</span></h1>
+        <h2 class="light">På Madhack <br>16-17 November 2018!</h2>
+
+        {{/*<ul class="generated__fact">
           {{ range $subject := $.Param "subject" }}
-            <li class="generator__options__option">{{ $subject.img }}</li>
+            <li class="generated__value generated__value--fact">
+              <div class="lead">Varför?</div>
+              <p>{{ $subject.fact }}</p>
+              <p>Källa: <a href="{{ $subject.facturl }}" target="_blank">{{ $subject.factsource }}</a></p>
+            </li>
           {{ end }}
-        </ul>
+        </ul>*/}}
       </div>
     </div>
   </header>
@@ -126,7 +117,7 @@
       {{ range $item := $.Param "faq" }}
         <li class="faq__item">
           <div class="faq__question">{{ $item.question }}</div>
-          <div class="faq__answer">{{ $item.answer }}</div>
+          <div class="faq__answer">{{ $item.answer | markdownify }}</div>
         </li>
       {{ end }}
     </ul>

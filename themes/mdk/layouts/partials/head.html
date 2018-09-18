@@ -19,6 +19,7 @@
     <script src="{{ $.Site.BaseURL }}js/lazysizes.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="{{ $.Site.BaseURL }}js/master.js" charset="utf-8"></script>
+    <script src="{{ $.Site.BaseURL }}js/ideagenerator.js" charset="utf-8"></script>
 
     {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "sass/master.scss" | resources.ToCSS $options }}
