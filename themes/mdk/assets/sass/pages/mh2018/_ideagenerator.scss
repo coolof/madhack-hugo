@@ -28,8 +28,8 @@
 .generated {
   @include shadow($width: 6px, $shadow2: false, $size: 1rem);
   background-color: #fff;
-  padding: 4rem;
-  max-width: grid_px(10);
+  padding: 5vw;
+  max-width: grid_px(10.5);
   //padding: 8vh 0;
 
   &:after {

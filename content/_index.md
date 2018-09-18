@@ -10,6 +10,12 @@ solution:
     img: service.png
   - name: något i VR
     img: vr.png
+  - name: något med AR
+  - name: en chattbot
+  - name: en pryl
+  - name: en hemsida
+  - name: nästa Twitter
+  - name: ett community
 subject:
   - name: matsvinn
     fact: Varje år slänger varje svensk ungefär 45kg mat – alltså totalt 450 000 ton mat. Svinnet är som störst under julen. Ett minskat matsvinn skulle inte enbart vara bra för miljön utan skulle kunna spara ett hushåll tusentals kronor om året.
@@ -22,6 +28,10 @@ subject:
   - name: stress
     fact: fakta stress
     img: stress.png
+  - name: välmående
+  - name: välgörenhet
+  - name: julklappar
+  - name: inslagning
 intro: "images/movie-placeholder.png"
 gro: ["images/gro36-1.jpg","images/gro36-2.jpg","images/gro36-3.jpg","images/gro36-4.jpg"]
 gallery: ["images/mh17-1.jpg","images/mh17-2.jpg","images/mh17-3.jpg","images/mh17-4.jpg","images/mh17-5.jpg","images/mh16-1.jpg"]
