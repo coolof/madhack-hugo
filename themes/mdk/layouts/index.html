@@ -2,10 +2,42 @@
 <article class="frontpage frontpage--mh2018 page">
   <header class="page__header page__header--split mh2018-hero">
     <div class="col">
-      <h1>Madhack 2018, woo!</h1>
+      <div class="generator">
+        <ul class="generator__options generator__solution">
+          <li class="lead"><strong>Gör</strong></li>
+          {{ range $solution := $.Param "solution" }}
+            <li class="generator__option__option">{{ $solution.name }}</li>
+          {{ end }}
+        </ul>
+        <ul class="generator__options generator__subject">
+          <li class="lead"><strong>Om</strong></li>
+          {{ range $subject := $.Param "subject" }}
+            <li class="generator__options__option">{{ $subject.name }}</li>
+          {{ end }}
+        </ul>
+        <ul class="generator__options generator__fact">
+          <li class="lead"><strong>Varför?</strong></li>
+          {{ range $subject := $.Param "subject" }}
+            <li class="generator__option__option">{{ $subject.fact }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
 
-      <div class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint occaecat cupidatat non proident, <span class="invert-text">sunt in culpa qui officia deserunt</span> mollit anim id est laborum.
+    <div class="col">
+      <div class="generator generator--slideshow">
+        <ul class="generator__img generator__solution-img">
+          <li class="lead"><strong>Gör - bild</strong></li>
+          {{ range $solution := $.Param "solution" }}
+            <li class="generator__option__option">{{ $solution.img }}</li>
+          {{ end }}
+        </ul>
+        <ul class="generator__options generator__subject">
+          <li class="lead"><strong>Om - bild</strong></li>
+          {{ range $subject := $.Param "subject" }}
+            <li class="generator__options__option">{{ $subject.img }}</li>
+          {{ end }}
+        </ul>
       </div>
     </div>
   </header>

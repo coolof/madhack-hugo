@@ -1,6 +1,25 @@
 ---
 title: "En hållbar jul"
 date: 2018-09-05T20:13:14+02:00
+solution:
+  - name: en app
+    img: app.png
+  - name: något med AI
+    img: ai.png
+  - name: en tjänst
+    img: service.png
+  - name: något i VR
+    img: vr.png
+subject:
+  - name: matsvinn
+    fact: fakta matsvinn
+    img: food.png
+  - name: konsumtion
+    fact: fakta konsumtion
+    img: stuff.png
+  - name: stress
+    fact: fakta stress
+    img: stress.png
 intro: "images/movie-placeholder.png"
 gro: ["images/gro36-1.jpg","images/gro36-2.jpg","images/gro36-3.jpg","images/gro36-4.jpg"]
 gallery: ["images/mh17-1.jpg","images/mh17-2.jpg","images/mh17-3.jpg","images/mh17-4.jpg","images/mh17-5.jpg","images/mh16-1.jpg"]
