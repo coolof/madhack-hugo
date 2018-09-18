@@ -1,9 +1,19 @@
 .section {
   @include contain();
-  margin-top: px-rem(96);
+  margin-top: px-rem(64);
 
   *:not(.grid):last-child {
     margin-bottom: 0;
+  }
+
+  @include mq($portrait) {
+    margin-top: px-rem(80);
+  }
+  @include mq($landscape) {
+    margin-top: px-rem(88);
+  }
+  @include mq($desktop) {
+    margin-top: px-rem(96);
   }
 }
 
@@ -29,13 +39,43 @@
 
 .margin {
   &--large {
-    margin-top: px-rem(128);
+    margin-top: px-rem(72);
+
+    @include mq($portrait) {
+      margin-top: px-rem(96);
+    }
+    @include mq($landscape) {
+      margin-top: px-rem(112);
+    }
+    @include mq($desktop) {
+      margin-top: px-rem(128);
+    }
   }
   &--small {
-    margin-top: px-rem(72);
+    margin-top: px-rem(48);
+
+    @include mq($portrait) {
+      margin-top: px-rem(56);
+    }
+    @include mq($landscape) {
+      margin-top: px-rem(64);
+    }
+    @include mq($desktop) {
+      margin-top: px-rem(72);
+    }
   }
   &--smaller {
-    margin-top: px-rem(64);
+    margin-top: px-rem(32);
+
+    @include mq($portrait) {
+      margin-top: px-rem(40);
+    }
+    @include mq($landscape) {
+      margin-top: px-rem(48);
+    }
+    @include mq($desktop) {
+      margin-top: px-rem(64);
+    }
   }
   &--none {
     margin-top: 0;

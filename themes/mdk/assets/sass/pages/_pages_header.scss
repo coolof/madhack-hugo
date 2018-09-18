@@ -18,7 +18,9 @@
     }
   }
 
-  .col--image {
-    margin-top: -2rem;
+  .col--image {  
+    @include mq($desktop) {
+      margin-top: -2rem;
+    }
   }
 }

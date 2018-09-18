@@ -17,9 +17,18 @@ body {
 	-moz-osx-font-smoothing: grayscale;
   background-color: $yellow;
   font-family: $font_normal;
-  font-size: px-rem(20);
-  line-height: px-rem(32);
+  font-size: px-rem(16);
+  line-height: px-rem(24);
   color: #000;
+
+  @include mq($landscape) {
+    font-size: px-rem(18);
+    line-height: px-rem(28);
+  }
+  @include mq($desktop) {
+    font-size: px-rem(20);
+    line-height: px-rem(32);
+  }
 }
 
 .container {

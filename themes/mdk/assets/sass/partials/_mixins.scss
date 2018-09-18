@@ -41,12 +41,12 @@ $vw: 1440;
   padding-right: 1rem;
 
   @include mq($portrait) {
-    padding-left: px-rem($padding - 16);
-    padding-right: px-rem($padding - 16);
+    padding-left: px-rem($padding);
+    padding-right: px-rem($padding);
   }
   @include mq($landscape) {
-    padding-left: px-rem($padding - 16);
-    padding-right: px-rem($padding - 16);
+    padding-left: px-rem($padding - 8);
+    padding-right: px-rem($padding - 8);
   }
   @include mq($desktop) {
     padding-left: px-rem($padding);

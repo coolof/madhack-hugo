@@ -3,7 +3,9 @@
 }
 
 .frontpage__intro {
-  padding-top: 4rem;
+  @include mq($portraitPlus) {
+    padding-top: 4rem;
+  }
 
   .grid {
     position: relative;
@@ -18,7 +20,7 @@
   }
   .grid__item:last-child {
     @include shadow($shadow1: 'lines', $size: px-rem(16), $width: 4px);
-    margin-top: -4rem;
+    margin-top: 0;
 
     &:before {
       background-size: 48px 48px;
@@ -29,6 +31,10 @@
     img {
       display: block;
       border: 4px solid #000;
+    }
+
+    @include mq($portraitPlus) {
+      margin-top: -4rem;
     }
   }
 }
@@ -86,49 +92,82 @@
   }
 }
 
-.grogrid {
-  display: grid;
-  margin-left: -1rem;
-  margin-right: -1rem;
+@include mq($mobile) {
+  .grogrid {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .grogrid__item {
+    width: 50%;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: px-rem(8);
+    &:nth-child(1) {
+      width: 100%;
+    }
+    &:nth-child(2) {
+      width: 100%;
+      order: 4;
+    }
+
+    img {
+      display: block;
+    }
+  }
 }
 
-.grogrid__item {
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+@include mq($portraitPlus) {
+  .grogrid {
+    display: grid;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: px-rem(8);
   }
 
-  &:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: span 2;
-  }
-  &:nth-child(2) {
-    grid-column-start: 4;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 1;
-  }
-  &:nth-child(3) {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 2;
-  }
-  &:nth-child(4) {
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 2;
+  .grogrid__item {
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: span 2;
+    }
+    &:nth-child(2) {
+      grid-column-start: 4;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+    &:nth-child(3) {
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
+    &:nth-child(4) {
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 2;
+    }
   }
 }
+
 
 .frontpage__gallery {
   .grid__item {

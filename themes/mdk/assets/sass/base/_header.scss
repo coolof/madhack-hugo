@@ -1,14 +1,28 @@
 /* ---- Header ---- */
 .site-header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-between;
-  margin-top: px-rem(56);
-  margin-bottom: px-rem(80);
+  justify-content: center;
+  margin-top: px-rem(24);
+  margin-bottom: px-rem(32);
+
+  @include mq($portrait) {
+    margin-top: px-rem(40);
+    margin-bottom: px-rem(56);
+  }
+  @include mq($landscapePlus) {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: px-rem(56);
+    margin-bottom: px-rem(80);
+  }
 }
 
 .logo {
+  margin-bottom: 1.5rem;
+
   &, svg {
     display: block;
   }
@@ -19,6 +33,10 @@
         animation: wave infinite 0.7s ease;
       }
     }
+  }
+
+  @include mq($landscapePlus) {
+    margin-bottom: 0;
   }
 }
 

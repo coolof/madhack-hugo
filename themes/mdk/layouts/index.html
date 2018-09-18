@@ -44,10 +44,10 @@
 
         <p>16-17 november kör vi, <a href="https://madhack2018.confetti.events/signup" target="_blank">anmäl dig idag!</a></p>
       </div>
-      <div class="grid__item">
+      <div class="grid__item grid__item--limit">
         {{/*<video src="pontus.mp4" autoplay loop mute poster="pontus.jpg"></video>*/}}
 
-        {{ partial "lazyimage" (dict "src" ($.Param "intro") "alt" "Movie placeholder" ) }}
+        {{ partial "lazyimage" (dict "src" ($.Param "intro") "alt" "En hållbar jul" ) }}
       </div>
     </div>
   </section>
@@ -58,19 +58,19 @@
 
       <div class="grid grid--4">
         <div class="grid__item">
-          <img src="contact/contact-facebook.svg" alt="">
+          <img src="images/network.svg" alt="Knyta kontakter">
           <h5>Knyta kontakter</h5>
         </div>
         <div class="grid__item">
-          <img src="contact/contact-facebook.svg" alt="">
+          <img src="images/heart.svg" alt="En god sak">
           <h5>För en god sak</h5>
         </div>
         <div class="grid__item">
-          <img src="contact/contact-facebook.svg" alt="">
+          <img src="images/brain.svg" alt="Lär dig något nytt">
           <h5>Lär dig något nytt</h5>
         </div>
         <div class="grid__item">
-          <img src="contact/contact-facebook.svg" alt="">
+          <img src="images/smile.svg" alt="För att det är kul">
           <h5>För att det är kul!</h5>
         </div>
       </div>
@@ -101,7 +101,7 @@
   </section>
 
   <section class="section frontpage__gallery">
-    <div class="grid grid--3">
+    <div class="grid grid--3 grid--mobile-2">
       {{ range $i, $path := $.Param "gallery" }}
         <div class="grid__item grid__item--image">
           {{ partial "lazyimage" (dict "src" $path "alt" (print "madhack-" $i) ) }}

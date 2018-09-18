@@ -32,7 +32,7 @@ subject:
   - name: välgörenhet
   - name: julklappar
   - name: inslagning
-intro: "images/movie-placeholder.png"
+intro: "images/enhallbarjul.jpg"
 gro: ["images/gro36-1.jpg","images/gro36-2.jpg","images/gro36-3.jpg","images/gro36-4.jpg"]
 gallery: ["images/mh17-1.jpg","images/mh17-2.jpg","images/mh17-3.jpg","images/mh17-4.jpg","images/mh17-5.jpg","images/mh16-1.jpg"]
 faq:

@@ -1,12 +1,22 @@
 .grid {
   display: grid;
-  grid-column-gap: px-rem($grid_gutter);
-  grid-row-gap: px-rem($grid_gutter);
+  grid-column-gap: px-rem(24);
+  grid-row-gap: px-rem(24);
+
+  @include mq($portraitPlus) {
+    grid-column-gap: px-rem($grid_gutter);
+    grid-row-gap: px-rem($grid_gutter);
+  }
 }
 
 .grid__item {
   //padding: 0 px-rem($grid_gutter * 0.5);
   //margin: 0 0 px-rem($grid_gutter);
+
+  &--limit {
+    justify-self: start;
+    align-self: start;
+  }
 
   &--image {
     img {
@@ -17,24 +27,45 @@
 
 /* Grid sizes */
 .grid--2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include mq($portraitPlus) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   .grid__item {
     //@include grid-cols-width(6);
   }
 }
 .grid--3 {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+
+  @include mq($portrait) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include mq($landscapePlus) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   .grid__item {
     //@include grid-cols-width(4);
   }
 }
 .grid--4 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @include mq($portraitPlus) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   .grid__item {
     //@include grid-cols-width(3);
+  }
+}
+
+.grid--mobile-2 {
+  @include mq($mobile) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -74,10 +105,30 @@
     img {
       display: block;
     }
+
+    @include mq($landscape) {
+      max-width: grid(6);
+    }
+    @include mq($desktop) {
+      max-width: grid(5.5);
+    }
   }
 
   &:not(&--image) {
     margin: 0 px-rem(72);
-    padding-top: px-rem(48);
+    //padding-top: px-rem(48);
+
+    @include mq($portrait) {
+      margin: 0 px-rem(40);
+      padding-top: px-rem(0);
+    }
+    @include mq($landscape) {
+      margin: 0 px-rem(40);
+      padding-top: px-rem(16);
+    }
+    @include mq($desktop) {
+      margin: 0 px-rem(72);
+      padding-top: px-rem(48);
+    }
   }
 }

@@ -4,8 +4,17 @@
 
 .about__header {
   h2 {
-    font-size: px-rem(44);
-    line-height: px-rem(52);
+    font-size: px-rem(32);
+    line-height: px-rem(40);
+
+    @include mq($landscape) {
+      font-size: px-rem(40);
+      line-height: px-rem(48);
+    }
+    @include mq($desktop) {
+      font-size: px-rem(44);
+      line-height: px-rem(52);
+    }
   }
 }
 
