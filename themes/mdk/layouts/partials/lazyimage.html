@@ -6,5 +6,5 @@
 <img alt="{{ .alt }}"
 src="{{ $resized.Permalink }}"
 data-src="{{ $image.Permalink }}"
-class="lazyload"
+class="lazyload{{ if .smooth }} smooth{{ end }}"
 {{ if not .nosize }}width="{{ $image.Width }}" height="{{ $image.Height }}"{{ end }} />

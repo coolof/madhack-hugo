@@ -94,7 +94,7 @@
     <div class="grogrid">
       {{ range $i, $path := $.Param "gro" }}
         <div class="grogrid__item">
-          {{ partial "lazyimage" (dict "src" $path "alt" (print "gro36-" $i) "nosize" true ) }}
+          {{ partial "lazyimage" (dict "src" $path "alt" (print "gro36-" $i) "nosize" true "smooth" true ) }}
         </div>
       {{ end }}
     </div>
