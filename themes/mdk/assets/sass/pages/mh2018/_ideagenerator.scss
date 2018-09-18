@@ -26,11 +26,15 @@
 
 /* Output */
 .generated {
-  @include shadow($width: 6px);
+  @include shadow($width: 6px, $shadow2: false, $size: 1rem);
   background-color: #fff;
   padding: 4rem;
   max-width: grid_px(10);
   //padding: 8vh 0;
+
+  &:after {
+    background-size: 4rem auto;
+  }
 
   h1 {
     font-size: px-rem(72);
