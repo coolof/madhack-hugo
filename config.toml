@@ -2,6 +2,7 @@ baseURL = "https://madhack.se/"
 languageCode = "sv-se"
 title = "Madhack"
 theme = "mdk"
+googleAnalytics = "UA-126070449-1"
 
 [params]
   signup = "https://madhack2018.confetti.events/signup"

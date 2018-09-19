@@ -6,3 +6,8 @@
     <img src="{{ $.Site.BaseURL }}contact/contact-instagram.svg" alt="Instagram">
   </a>
 </footer>
+
+
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
