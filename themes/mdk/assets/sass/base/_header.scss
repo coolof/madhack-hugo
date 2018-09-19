@@ -95,6 +95,12 @@
   }
 }
 
+.nav-toggle {
+  @include mq($portraitPlus) {
+    display: none;
+  }
+}
+
 @keyframes wave {
   0%,100% {
     transform: translateY(0px);
