@@ -30,7 +30,6 @@
     margin-top: 0;
 
     &:before {
-
       background-position: bottom right;
     }
 
@@ -44,6 +43,8 @@
       margin-top: -4rem;
 
       &:before {
+        top: 1.5rem;
+        left: 1.5rem;
         right: -1rem;
         bottom: -1rem;
         box-shadow: 0px 0px 0px 4px #000;
