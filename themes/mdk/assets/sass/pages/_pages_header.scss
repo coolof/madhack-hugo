@@ -4,23 +4,35 @@
 
 .page__header--split {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
 
-  .col {
-    flex: none;
-    width: 50%;
-
-    &:nth-child(odd) {
-      padding-right: px-rem($grid_gutter / 2);
-    }
-    &:nth-child(even) {
-      padding-left: px-rem($grid_gutter / 2);
-    }
+  .col--image {
+    order: -1;
+    margin-bottom: 2rem;
   }
 
-  .col--image {  
-    @include mq($desktop) {
-      margin-top: -2rem;
+  @include mq($portraitPlus) {
+    flex-flow: row wrap;
+
+    .col {
+      flex: none;
+      width: 50%;
+
+      &:nth-child(odd) {
+        padding-right: px-rem($grid_gutter / 2);
+      }
+      &:nth-child(even) {
+        padding-left: px-rem($grid_gutter / 2);
+      }
+    }
+
+    .col--image {
+      order: 2;
+      margin-bottom: 0;
+
+      @include mq($desktop) {
+        margin-top: -2rem;
+      }
     }
   }
 }

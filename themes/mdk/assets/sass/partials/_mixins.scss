@@ -227,9 +227,11 @@ $vw: 1440;
 }
 
 
-@mixin shadow($shadow1: 'normal', $shadow2: false, $size: px-rem(12), $background: $yellow, $width: 2px) {
-  position: relative;
-  box-shadow: inset 0px 0px 0px $width #000;
+@mixin shadow($shadow1: 'normal', $shadow2: false, $size: px-rem(12), $background: $yellow, $width: 2px, $position: true, $color: #000) {
+  @if $position {
+    position: relative;
+  }
+  box-shadow: inset 0px 0px 0px $width $color;
 
   @if $shadow1 {
     &:before {
@@ -240,7 +242,7 @@ $vw: 1440;
       bottom: $size * -1;
       left: $size;
       top: $size;
-      box-shadow: inset 0px 0px 0px $width #000;
+      box-shadow: inset 0px 0px 0px $width $color;
 
       @if $shadow1 == 'dots' {
         background: $background url('../img/dots-pattern.svg') repeat 7px -6px;
@@ -268,7 +270,7 @@ $vw: 1440;
       bottom: $size * -2;
       left: $size * 2;
       top: $size * 2;
-      box-shadow: inset 0px 0px 0px $width #000;
+      box-shadow: inset 0px 0px 0px $width $color;
 
       @if $shadow2 == 'dots' {
         background: $background url('../img/dots-pattern.svg') repeat 7px -6px;

@@ -16,7 +16,7 @@ $(document).ready(function() {
         }
       });
 
-    console.log($(this).find('.letter').length);
+    //console.log($(this).find('.letter').length);
 
     if($(this).find('.letter').length > 13) {
       $(this).addClass('item--long');
@@ -26,5 +26,10 @@ $(document).ready(function() {
   $('.faq__question').click(function() {
     $(this).parent().toggleClass('faq__item--open');
     $(this).parent().find('.faq__answer').slideToggle(200);
+  });
+
+  $('.nav-toggle').click(function() {
+    $('.site-header').toggleClass('nav-open');
+    console.log('clickie!');
   });
 });

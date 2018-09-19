@@ -3,9 +3,18 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding: px-rem(80) 0;
+  padding: 3.5rem 0 calc(3.5rem - 4px);
 
   a {
     margin: 0 0.75rem;
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  @include mq($portraitPlus) {
+    padding: px-rem(80) 0;
   }
 }

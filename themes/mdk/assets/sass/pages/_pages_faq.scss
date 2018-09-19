@@ -7,15 +7,26 @@
   background-color: $primary;
   margin-bottom: 1rem;
   text-align: left;
-  transition: all 0.4s ease;
   padding: 2px;
+
+  @media (hover: hover) {
+    transition: all 0.4s ease;
+  }
 
   &:before {
     content: '';
-    right: 1rem;
-    bottom: 1rem;
-    transition: all 0.4s 0.2s ease;
+    right: 0.5rem;
+    bottom: 0.5rem;
     box-shadow: 0px 0px 0px 0px transparent;
+
+    @media (hover: hover) {
+      transition: all 0.4s 0.2s ease;
+    }
+
+    @include mq($portraitPlus) {
+      right: 1rem;
+      bottom: 1rem;
+    }
   }
 }
 
@@ -26,9 +37,12 @@
   line-height: px-rem(20);
   font-weight: $weight_bold;
   text-transform: uppercase;
-  padding: px-rem(20) 2rem 1rem 1.5rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
   cursor: pointer;
-  transition: all 0.4s 0.1s ease;
+
+  @media (hover: hover) {
+    transition: all 0.4s 0.1s ease;
+  }
 
   &:after {
     @include icon-stroke($icon: $chevron_right, $background-position: center center, $color: #000, $line-height: 24px, $padding: false);
@@ -40,30 +54,41 @@
     width: 1.5rem;
     height: 1.5rem;
     transform: translateY(-50%);
-    transition: all 0.3s 0.2s ease, right 0.3s 0s ease;
+
+    @media (hover: hover) {
+      transition: all 0.3s 0.2s ease, right 0.3s 0s ease;
+    }
   }
 
   &:hover{
     background-color: #fff;
   }
+
+  @include mq($portraitPlus) {
+    padding: px-rem(20) 2rem 1rem 1.5rem;
+  }
 }
 
 .faq__answer {
   display: none;
-  padding: 0 2rem 1.5rem;
+  padding: 0 1.5rem 1.5rem;
+
+  @include mq($portraitPlus) {
+    padding: 0 2rem 1.5rem;
+  }
 }
 
 
 .faq__item--open {
   background-color: #fff;
   margin: 1.5rem -0.5rem;
-  @include shadow($shadow1: 'lines', $size: px-rem(8));
+  @include shadow($shadow1: 'lines', $size: px-rem(5));
 
   .faq__question {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: px-rem(20);
-    line-height: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: px-rem(18);
+    line-height: 1.5rem;
     font-weight: $weight_super;
 
     &:after {
@@ -74,5 +99,19 @@
 
   .faq__answer {
     //display: block;
+  }
+
+  @include mq($portraitPlus) {
+    &:before {
+      right: -0.5rem;
+      bottom: -0.5rem;
+    }
+
+    .faq__question {
+      font-size: px-rem(20);
+      line-height: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }

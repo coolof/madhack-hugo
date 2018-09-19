@@ -1,5 +1,8 @@
 ---
 title: "En hållbar jul"
+menu:
+  main:
+    weight: -1
 date: 2018-09-05T20:13:14+02:00
 solution:
   - name: en app
@@ -48,9 +51,6 @@ faq:
   -
     question: "Hur anmäler jag mig?"
     answer: Du anmäler dig [här](https://madhack2018.confetti.events/signup). Anmälan sköts via tjänsten Confetti och du betalar direkt i samband med din anmälan.
-  -
-    question: Vi vill anmäla oss som ett lag, går det?
-    answer: Ja. Med det sagt så vill vi helst lotta lagen för att få till en bra mix för alla deltagare. Anmäl er [var för sig](https://madhack2018.confetti.events/signup) och [skicka sedan ett mail till oss](mailto:hej@madhack.se) med alla lagmedlemmarnas namn och eventuellt lagnamn.
   -
     question: "Vad kostar det?"
     answer: "Det kostar 150kr per person."
