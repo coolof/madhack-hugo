@@ -57,9 +57,12 @@
   }
 
   h2 {
-    font-size: px-rem(20);
-    line-height: px-rem(28);
     margin: 0;
+
+    @include mq($mobile) {
+      font-size: px-rem(20);
+      line-height: px-rem(28);
+    }
   }
 
   @include mq($portrait) {
