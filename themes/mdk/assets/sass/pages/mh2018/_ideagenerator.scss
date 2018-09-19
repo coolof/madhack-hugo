@@ -65,6 +65,15 @@
     }
   }
 
+  @include mq($portraitPlus) {
+    &:before {
+      top: 1rem;
+      left: 1rem;
+      right: -1rem;
+      bottom: -1rem;
+    }
+  }
+
   @include mq($portrait) {
     margin-right: px-rem(48);
     padding: px-rem(56) px-rem(48) px-rem(48);
@@ -91,8 +100,6 @@
     box-shadow: inset 0px 0px 0px 4px #000;
 
     &:before {
-      right: -1rem;
-      bottom: -1rem;
       box-shadow: inset 0px 0px 0px 4px #000;
     }
 
@@ -111,8 +118,6 @@
     box-shadow: inset 0px 0px 0px 6px #000;
 
     &:before {
-      right: -1rem;
-      bottom: -1rem;
       box-shadow: inset 0px 0px 0px 6px #000;
     }
 
