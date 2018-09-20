@@ -116,6 +116,7 @@
   @include mq($desktop) {
     max-width: grid_px(10.5);
     box-shadow: inset 0px 0px 0px 6px #000;
+    padding: px-rem(80) px-rem(72) px-rem(72);
 
     &:before {
       box-shadow: inset 0px 0px 0px 6px #000;

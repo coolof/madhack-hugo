@@ -37,7 +37,7 @@
   line-height: px-rem(20);
   font-weight: $weight_bold;
   text-transform: uppercase;
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  padding: 1.5rem 3rem 1rem 1.5rem;
   cursor: pointer;
 
   @media (hover: hover) {
@@ -65,13 +65,13 @@
   }
 
   @include mq($portraitPlus) {
-    padding: px-rem(20) 2rem 1rem 1.5rem;
+    padding: px-rem(20) 3rem 1rem 1.5rem;
   }
 }
 
 .faq__answer {
   display: none;
-  padding: 0 1.5rem 1.5rem;
+  padding: 0 3rem 1.5rem 1.5rem;
 
   @include mq($portraitPlus) {
     padding: 0 2rem 1.5rem;
@@ -86,7 +86,7 @@
 
   .faq__question {
     padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    //padding-right: 1.5rem;
     font-size: px-rem(18);
     line-height: 1.5rem;
     font-weight: $weight_super;
@@ -111,7 +111,9 @@
       font-size: px-rem(20);
       line-height: 2rem;
       padding-left: 2rem;
-      padding-right: 2rem;
+      padding-right: 4rem;
+    }
+    .faq__answer {
     }
   }
 }
